@@ -34,7 +34,7 @@ namespace WebApplication1.Controllers
         public async Task<IActionResult> CallBackAsync([FromQuery]String code)
         {
             var cookieOption = new CookieOptions();
-            cookieOption.Domain = "jphacks.azurewebsites.net";
+            cookieOption.Domain = ".jphacks.azurewebsites.net";
             var accessToken = await githubClient.GetAccessTokenAsync(code);
             Response.Cookies.Append("accessToken", accessToken, cookieOption);
             // 管理画面へ遷移するようにする
