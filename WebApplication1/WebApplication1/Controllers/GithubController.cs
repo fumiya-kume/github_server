@@ -37,7 +37,7 @@ namespace WebApplication1.Controllers
             var accessToken = await githubClient.GetAccessTokenAsync(code);
             Response.Cookies.Append("accessToken", accessToken, cookieOption);
             // 管理画面へ遷移するようにする
-            return Ok(accessToken);
+            return Redirect("https://jphacks.azurewebsites.net/management/management.html");
         }
     }
 }
