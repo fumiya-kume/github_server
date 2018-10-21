@@ -9,7 +9,6 @@ namespace WebApplication1.Model
 {
     public class GithubClient : IGithubClient
     {
-        private String baseUrl = "api.github.com";
         private IConfiguration _configuration;
 
         public GithubClient(IConfiguration configuration)
